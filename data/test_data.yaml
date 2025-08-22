@@ -1,0 +1,19 @@
+# Test data for user signup and account creation
+user:
+  name: "Satvik Jayalwal"
+  email: "satvikjayalwalips@gmail.com"
+  password: "123456"
+  gender: "male"
+  dob:
+    day: "15"
+    month: "November"
+    year: "2004"
+  first_name: "Satvik"
+  last_name: "Jayalwal"
+  company: "Satvik Solutions Pvt. Ltd."
+  address1: "Sector-47, Gurugram, Haryana, India"
+  country: "India"
+  state: "Haryana"
+  city: "Gurugram"
+  zipcode: "122001"
+  mobile_number: "8810655751"
