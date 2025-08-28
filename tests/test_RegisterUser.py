@@ -56,3 +56,4 @@ def test_register_user(driver, user_data):
     
     # Click the 'Continue' button after account deletion
     account_page.continue_after_deletion()
+    print("continue clicked")

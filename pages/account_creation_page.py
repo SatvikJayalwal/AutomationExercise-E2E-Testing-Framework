@@ -43,3 +43,4 @@ class AccountCreationPage(BasePage):
     # Click create account button
     def create_account(self):
         self.click(self.create_account_btn)
+        self.find_element(self.account_created_text)
