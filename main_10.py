@@ -15,6 +15,7 @@ driver.get("http://automationexercise.com")
 home_logo = WebDriverWait(driver,10).until(
     EC.visibility_of_element_located((By.XPATH,"//img[@alt='Website for automation practice']"))
 )
+assert home_logo.is_displayed(), "HOME LOGO not displayed"
 
 # Scroll down to footer
 subscription = driver.find_element(By.XPATH,"//div[@class='single-widget']/h2")
