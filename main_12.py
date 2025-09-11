@@ -31,7 +31,7 @@ first_product_name = driver.find_element(By.XPATH, "(//div[@class='productinfo t
 second_product_name = driver.find_element(By.XPATH, "(//div[@class='productinfo text-center']/p)[2]").text
 
 # Add first product
-driver.find_element(By.XPATH, "(//a[@data-product-id='1'])[1]").click()
+product_1 = driver.find_element(By.XPATH, "(//a[@data-product-id='1'])[1]").click()
 
 # Click 'Continue Shopping' button
 continue_button = WebDriverWait(driver, 10).until(
@@ -40,10 +40,10 @@ continue_button = WebDriverWait(driver, 10).until(
 continue_button.click()
 
 # Add second product
-second_product = WebDriverWait(driver, 10).until(
+product_2 = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, "(//a[@data-product-id='2'])[1]"))
 )
-second_product.click()
+product_2.click()
 
 # Click 'Continue Shopping' button
 continue_button = WebDriverWait(driver, 10).until(
