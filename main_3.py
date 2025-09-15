@@ -1,3 +1,4 @@
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -37,3 +38,7 @@ incorrect_msg = WebDriverWait(driver,10).until(
     EC.visibility_of_element_located((By.XPATH,"//p[normalize-space()='Your email or password is incorrect!']"))
 )
 assert incorrect_msg.is_displayed(), "YOUR EMAIL OR PASSWORD IS INCORRECT! is not displayed"
+
+# Quit driver
+time.sleep(2)
+driver.quit()

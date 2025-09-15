@@ -87,17 +87,17 @@ logged_in=WebDriverWait(driver,10).until(
 assert logged_in.is_displayed(), "Logged in as username not visible"
 assert "Satvik Jayalwal" in logged_in.text, "Correct username not visible"
 
-# # Click 'Delete Account' button
-# driver.find_element(By.XPATH,"//a[@href='/delete_account']").click()
+# Click 'Delete Account' button
+driver.find_element(By.XPATH,"//a[@href='/delete_account']").click()
 
-# # Verify that 'ACCOUNT DELETED!' is visible 
-# account_deleted=WebDriverWait(driver,10).until(
-#     EC.visibility_of_element_located((By.XPATH,"//h2[@data-qa='account-deleted']"))
-# )
-# assert "ACCOUNT DELETED!" in account_deleted.text, "ACCOUNT DELETED! is not visible"
+# Verify that 'ACCOUNT DELETED!' is visible 
+account_deleted=WebDriverWait(driver,10).until(
+    EC.visibility_of_element_located((By.XPATH,"//h2[@data-qa='account-deleted']"))
+)
+assert "ACCOUNT DELETED!" in account_deleted.text, "ACCOUNT DELETED! is not visible"
 
-# # Click 'Continue' button
-# driver.find_element(By.XPATH,"//a[@data-qa='continue-button']").click()
+# Click 'Continue' button
+driver.find_element(By.XPATH,"//a[@data-qa='continue-button']").click()
 
 # Quit driver
 time.sleep(2)

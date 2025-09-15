@@ -82,5 +82,7 @@ for row in cart_rows:
     assert int(quantity) >= 1, f"Quantity invalid for {product_name}"
     assert total.startswith("Rs."), f"Total format invalid for {product_name}"
 
-# Close browser
+
+# Quit driver
+time.sleep(2)
 driver.quit()
