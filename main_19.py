@@ -55,3 +55,7 @@ brand_2_page = WebDriverWait(driver,10).until(
     EC.visibility_of_element_located((By.XPATH,"//div[@class='features_items']//h2[contains(normalize-space(),'Brand - Polo Products')]"))
 )
 assert brand_2_page.is_displayed(), "BRAND PAGE not displayed"
+
+# Quit driver
+time.sleep(2)
+driver.quit()

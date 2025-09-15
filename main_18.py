@@ -58,3 +58,7 @@ jeans_products = WebDriverWait(driver,10).until(
     EC.visibility_of_element_located((By.XPATH,"//div[@class='features_items']//h2[contains(normalize-space(),'Men - Jeans Products')]"))
 )
 assert jeans_products.is_displayed(), "MEN - JEANS PRODUCTS not displayed"
+
+# Quit driver
+time.sleep(2)
+driver.quit()
