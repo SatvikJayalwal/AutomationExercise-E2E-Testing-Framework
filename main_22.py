@@ -17,7 +17,6 @@ home_logo = WebDriverWait(driver,10).until(
 )
 assert home_logo.is_displayed(), "HOME PAGE not displayed"
 
-# Scroll to bottom of page
 # Verify 'RECOMMENDED ITEMS' are visible
 recommended_items = WebDriverWait(driver,10).until(
     EC.visibility_of_element_located((By.XPATH,"//div[@class='recommended_items']//h2[normalize-space()='recommended items']"))
