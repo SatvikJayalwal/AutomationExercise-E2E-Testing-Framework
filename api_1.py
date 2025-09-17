@@ -1,4 +1,8 @@
 # API 1: Get All Products List
+# API URL: https://automationexercise.com/api/productsList
+# Request Method: GET
+# Response Code: 200
+# Response JSON: All products list
 
 import requests
 import json
@@ -9,9 +13,11 @@ url = "https://automationexercise.com/api/productsList"
 # Send GET request
 response = requests.get(url)
 
-# Validate Status Code
+# Capture Status Code
 status = response.status_code
 print(f"Status Code : {status}")
+
+# Assert expected status code
 assert status == 200, f"Expected 200(OK) but got {status}"
 
 # Parse JSON response
