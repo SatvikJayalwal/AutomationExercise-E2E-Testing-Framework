@@ -21,7 +21,7 @@ print("Status Code:", status)
 if status != 405:
     print(f"[BUG] Expected 405 (Method Not Allowed), but got {status}")
 else:
-    print("✅ Status code is correct (405)")
+    print("Status code is correct (405)")
 
 # Print response text from server
 response_text = response.text
