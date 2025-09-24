@@ -7,23 +7,25 @@
 import requests
 import json
 
-# API URL
 url = "https://automationexercise.com/api/verifyLogin"
 
-# Send DELETE request
 response = requests.delete(url)
 
-# Capture status code
-status = response.status_code
-print(f"Status Code : {status}")
+# Parse JSON response
+try:
+    response_json = response.json()
+except json.JSONDecodeError:
+    response_json = {}
+print("Response JSON:", response_json)
 
-# Response text
-response_text = response.text
-print("Response text:", response_text)
+# Use responseCode if present, else fallback to HTTP status
+actual_code = response_json.get("responseCode", response.status_code)
+print(f"Status / Response Code: {actual_code}")
 
 # Expected vs Actual check
-if status != 405:
-    print(f"[BUG] Expected 405 (Method Not Allowed), but got {status}")
+if actual_code != 405:
+    print(f"[BUG] Expected 405, but got {actual_code}")
 
-# Validate that response body contains the right message
-assert "This request method is not supported" in response_text, "Unexpected response message!"
+# Validate message
+expected_msg = "This request method is not supported"
+assert expected_msg in response_json.get("message", "") or expected_msg in response.text, "Unexpected response message!"

@@ -1,36 +1,35 @@
 # API 10: POST To Verify Login with invalid details
 # API URL: https://automationexercise.com/api/verifyLogin
 # Request Method: POST
-# Request Parameters: email, password (invalid values)
-# Response Code: 404
-# Response Message: User not found!
+# Expected Response Code: 404
+# Expected Response Message: "User not found!"
 
 import requests
 import json
 
-# API URL
 url = "https://automationexercise.com/api/verifyLogin"
-
-# Payload: invalid email and password
 payload = {
     "email": "invalid@example.com",
     "password": "wrongpassword"
 }
 
-# Send POST request
 response = requests.post(url, data=payload)
 
-# Capture status code
-status = response.status_code
-print(f"Status Code : {status}")
+# Parse JSON response
+try:
+    response_json = response.json()
+except json.JSONDecodeError:
+    response_json = {}
+print("Response JSON:", response_json)
 
-# Response text
-response_text = response.text
-print("Response text:", response_text)
+# Use responseCode if present, else fallback to HTTP status
+actual_code = response_json.get("responseCode", response.status_code)
+print(f"Status / Response Code: {actual_code}")
 
 # Expected vs Actual check
-if status != 404:
-    print(f"[BUG] Expected 404 (Not Found), but got {status}")
+if actual_code != 404:
+    print(f"[BUG] Expected 404, but got {actual_code}")
 
-# Validate that response body contains the right message
-assert "User not found" in response_text, "Unexpected response message!"
+# Validate message
+expected_msg = "User not found"
+assert expected_msg in response_json.get("message", "") or expected_msg in response.text, "Unexpected response message!"

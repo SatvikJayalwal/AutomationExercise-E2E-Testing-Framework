@@ -7,28 +7,26 @@
 import requests
 import json
 
-# API URL
 url = "https://automationexercise.com/api/verifyLogin"
+payload = {"password": "mypassword123"}
 
-# Payload: only password, missing email
-payload = {
-    "password": "123456"
-}
-
-# Send POST request
 response = requests.post(url, data=payload)
 
-# Capture status code
-status = response.status_code
-print(f"Status Code : {status}")
+# Parse JSON response
+try:
+    response_json = response.json()
+except json.JSONDecodeError:
+    response_json = {}
+print("Response JSON:", response_json)
 
-# Response text
-response_text = response.text
-print("Response text:", response_text)
+# Use responseCode if present, else fallback to HTTP status
+actual_code = response_json.get("responseCode", response.status_code)
+print(f"Status / Response Code: {actual_code}")
 
 # Expected vs Actual check
-if status != 400:
-    print(f"[BUG] Expected 400 (Bad Request), but got {status}")
+if actual_code != 400:
+    print(f"[BUG] Expected 400, but got {actual_code}")
 
-# Validate that response body contains the right message
-assert "email or password parameter is missing" in response_text, "Unexpected response message!"
+# Validate message
+expected_msg = "email or password parameter is missing"
+assert expected_msg in response_json.get("message", "") or expected_msg in response.text, "Unexpected response message!"
