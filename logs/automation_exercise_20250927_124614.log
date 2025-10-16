@@ -1,5 +1,0 @@
-2025-09-27 12:46:15,503 - AutomationExercise - INFO - Setting up test environment
-2025-09-27 12:46:15,505 - AutomationExercise - INFO - Test environment setup completed
-2025-09-27 12:46:22,596 - AutomationExercise - ERROR - Failed to create driver: [WinError 193] %1 is not a valid Win32 application
-2025-09-27 12:46:23,288 - AutomationExercise - INFO - Tearing down test environment
-2025-09-27 12:46:23,289 - AutomationExercise - INFO - Test execution completed

@@ -1,5 +1,0 @@
-2025-09-27 12:45:59,705 - AutomationExercise - INFO - Setting up test environment
-2025-09-27 12:45:59,707 - AutomationExercise - INFO - Test environment setup completed
-2025-09-27 12:46:03,746 - AutomationExercise - ERROR - Failed to create driver: Could not reach host. Are you offline?
-2025-09-27 12:46:05,322 - AutomationExercise - INFO - Tearing down test environment
-2025-09-27 12:46:05,323 - AutomationExercise - INFO - Test execution completed
