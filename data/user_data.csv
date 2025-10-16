@@ -1,0 +1,4 @@
+name,email,password,title,first_name,last_name,company,address1,address2,country,state,city,zipcode,mobile_number,day,month,year
+Test User 1,testuser1@example.com,password123,Mr,Test,User,Test Company,123 Test Street,Apt 1,India,Test State,Test City,12345,1234567890,15,November,1990
+Test User 2,testuser2@example.com,password456,Ms,Jane,Doe,Doe Corp,456 Main Street,Suite 100,United States,California,Los Angeles,90210,9876543210,10,January,1985
+Test User 3,testuser3@example.com,password789,Mr,Bob,Smith,Smith Inc,789 Oak Avenue,Unit 2,Canada,Ontario,Toronto,M5V 3A8,5551234567,20,March,1988

@@ -1,0 +1,22 @@
+# Core testing framework
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-xdist==3.3.1
+pytest-timeout==2.2.0
+pytest-cov==4.1.0
+
+# Selenium and WebDriver
+selenium==4.15.2
+webdriver-manager==4.0.1
+
+# HTTP requests for API testing
+requests==2.31.0
+
+# Configuration and data handling
+PyYAML==6.0.1
+
+# Allure reporting
+allure-pytest==2.13.2
+
+# Logging and utilities
+colorlog==6.7.0

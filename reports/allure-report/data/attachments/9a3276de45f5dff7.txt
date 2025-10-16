@@ -1,0 +1,11 @@
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): googlechromelabs.github.io:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 13625
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): googlechromelabs.github.io:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 13625
+[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\HP\.wdm\drivers\chromedriver\win64\141.0.7390.78\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+[1m[31mERROR   [0m AutomationExercise:conftest.py:142 Failed to create driver: [WinError 193] %1 is not a valid Win32 application
+[32mINFO    [0m AutomationExercise:conftest.py:288 Tearing down test environment
+[32mINFO    [0m AutomationExercise:conftest.py:289 Test execution completed

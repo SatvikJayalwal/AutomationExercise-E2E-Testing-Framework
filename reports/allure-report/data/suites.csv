@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Test the structure of products list response.","1662","test_get_all_products_list_response_structure","tests.api","Thu Oct 16 10:54:47 IST 2025","passed","Thu Oct 16 10:54:49 IST 2025","TestGetAllProductsList","test_api_1","",""
+"Test user registration with different user data.","0","test_register_user_with_different_data","tests.ui","Thu Oct 16 10:55:35 IST 2025","broken","Thu Oct 16 10:55:35 IST 2025","TestRegisterUser","test_ui_1","",""
+"Test GET request to products list API.","1883","test_get_all_products_list","tests.api","Thu Oct 16 10:54:45 IST 2025","passed","Thu Oct 16 10:54:47 IST 2025","TestGetAllProductsList","test_api_1","",""
+"Test complete user registration flow.","0","test_register_user_complete_flow","tests.ui","Thu Oct 16 10:55:17 IST 2025","broken","Thu Oct 16 10:55:17 IST 2025","TestRegisterUser","test_ui_1","",""

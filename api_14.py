@@ -30,4 +30,4 @@ if actual_code != 200:
     print(f"[BUG] Expected 200, but got {actual_code}")
 
 # Validate message / user detail existence
-assert "email" in response_json or "user" in response_json, "Unexpected response content!"
+assert "email" in response_json or "user" in response_json, "Unexpected response content!"  

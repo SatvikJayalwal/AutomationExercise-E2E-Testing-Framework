@@ -1,0 +1,92 @@
+{
+    "test_users": [
+        {
+            "name": "Test User",
+            "email": "testuser@example.com",
+            "password": "password123",
+            "title": "Mr",
+            "first_name": "Test",
+            "last_name": "User",
+            "company": "Test Company",
+            "address1": "123 Test Street",
+            "address2": "Apt 1",
+            "country": "India",
+            "state": "Test State",
+            "city": "Test City",
+            "zipcode": "12345",
+            "mobile_number": "1234567890",
+            "day": "15",
+            "month": "November",
+            "year": "1990"
+        },
+        {
+            "name": "John Doe",
+            "email": "johndoe@example.com",
+            "password": "password456",
+            "title": "Mr",
+            "first_name": "John",
+            "last_name": "Doe",
+            "company": "Doe Industries",
+            "address1": "456 Main Street",
+            "address2": "Suite 100",
+            "country": "United States",
+            "state": "California",
+            "city": "Los Angeles",
+            "zipcode": "90210",
+            "mobile_number": "9876543210",
+            "day": "10",
+            "month": "January",
+            "year": "1985"
+        }
+    ],
+    "invalid_users": [
+        {
+            "email": "invalid@example.com",
+            "password": "wrongpassword"
+        },
+        {
+            "email": "nonexistent@example.com",
+            "password": "password123"
+        }
+    ],
+    "api_endpoints": {
+        "products_list": "/api/productsList",
+        "brands_list": "/api/brandsList",
+        "search_product": "/api/searchProduct",
+        "product_details": "/api/getProductDetails",
+        "verify_login": "/api/verifyLogin",
+        "create_account": "/api/createAccount",
+        "update_account": "/api/updateAccount",
+        "delete_account": "/api/deleteAccount",
+        "search_products": "/api/searchProduct"
+    },
+    "test_products": [
+        {
+            "name": "Blue Top",
+            "category": "Tops",
+            "price": "Rs. 500",
+            "brand": "Polo"
+        },
+        {
+            "name": "Men Tshirt",
+            "category": "Men",
+            "price": "Rs. 400",
+            "brand": "H&M"
+        }
+    ],
+    "search_terms": [
+        "dress",
+        "tshirt",
+        "jeans",
+        "shirt"
+    ],
+    "contact_form": {
+        "name": "Test Contact",
+        "email": "contact@example.com",
+        "subject": "Test Subject",
+        "message": "This is a test message for contact form."
+    },
+    "newsletter": {
+        "email": "newsletter@example.com"
+    }
+}

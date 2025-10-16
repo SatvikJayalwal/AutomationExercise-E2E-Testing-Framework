@@ -1,0 +1,7 @@
+[32mINFO    [0m AutomationExercise:conftest.py:220 Starting test: test_get_all_products_list_response_structure
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:1049 Starting new HTTPS connection (1): automationexercise.com:443
+[35mDEBUG   [0m urllib3.connectionpool:connectionpool.py:544 https://automationexercise.com:443 "GET /api/productsList HTTP/1.1" 200 None
+[32mINFO    [0m AutomationExercise:helpers.py:252 API GET request to https://automationexercise.com/api/productsList - Status: 200
+[32mINFO    [0m AutomationExercise:conftest.py:254 Completed test: test_get_all_products_list_response_structure
+[32mINFO    [0m AutomationExercise:conftest.py:288 Tearing down test environment
+[32mINFO    [0m AutomationExercise:conftest.py:289 Test execution completed
