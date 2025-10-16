@@ -18,10 +18,10 @@ def run_command(command, description):
     
     try:
         result = subprocess.run(command, shell=True, check=True, capture_output=False)
-        print(f"✅ {description} completed successfully")
+        print(f"{description} completed successfully")
         return True
     except subprocess.CalledProcessError as e:
-        print(f"❌ {description} failed with exit code {e.returncode}")
+        print(f"{description} failed with exit code {e.returncode}")
         return False
 
 
@@ -92,13 +92,13 @@ def main():
     success = run_command(command, f"Running {args.type} tests")
     
     if success and args.report:
-        print("\n📊 Generating reports...")
+        print("\nGenerating reports...")
         
         # Generate Allure report
         allure_cmd = "allure generate reports/allure-results -o reports/allure-report --clean"
         run_command(allure_cmd, "Generating Allure report")
         
-        print("\n📁 Reports generated:")
+        print("\nReports generated:")
         print("  - HTML Report: reports/report.html")
         print("  - Allure Report: reports/allure-report/index.html")
         print("  - JUnit XML: reports/junit.xml")
